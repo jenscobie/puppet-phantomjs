@@ -10,19 +10,19 @@ Install [PhantomJS](http://phantomjs.org/) a headless WebKit scriptable with a J
 # Installs Phantomenv for PhantomJS version management
 include phantomjs
 
-# Install PhantomJS version 1.9.0
-phantomjs::version { '1.9.0': }
+# Install PhantomJS version 1.9.2
+phantomjs::version { '1.9.2': }
 
 # The two commands above in one line
-include phantomjs::1_9_0
+include phantomjs::1_9_2
 
 # Sets local version of PhantomJS, writes .phantomenv file to directory specified (version should be installed already)
 phantomjs::local { '/path/to/whatever':
-  version => '1.9.0'
+  version => '1.9.2'
 }
 
 # Set the global version of PhantomJS (version should be installed already)
-phantomjs::global { '1.9.0': }
+phantomjs::global { '1.9.2': }
 ```
 
 ## Required Puppet Modules
