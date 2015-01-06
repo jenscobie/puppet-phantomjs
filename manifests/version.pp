@@ -21,7 +21,7 @@ define phantomjs::version($ensure = present) {
     } ->
     exec { "phantomenv install ${name}":
       command  => "${phantomjs::phantomenv_root}/bin/phantomenv install ${name}",
-      creates  => $dest,
+      creates  => "$dest/bin",
       provider => shell,
       user     => $phantomjs::phantomenv_user
     }
