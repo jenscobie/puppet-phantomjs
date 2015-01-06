@@ -16,6 +16,9 @@ define phantomjs::version($ensure = present) {
       force  => true,
     }
   } else {
+    file { "$dest":
+      ensure => "directory",
+    } ->
     exec { "phantomenv install ${name}":
       command  => "${phantomjs::phantomenv_root}/bin/phantomenv install ${name}",
       creates  => $dest,
